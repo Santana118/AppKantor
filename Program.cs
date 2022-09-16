@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace AppKantor
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
             string[] namaKaryawan =
@@ -16,9 +15,9 @@ namespace AppKantor
                 "Giri Atma Santana"
             };
             int[] gajiKaryawan = new int[] { 1000000, 2500000, 375000000, 1000000000 };
-            
+
             Program.ReportDisplay(namaKaryawan, gajiKaryawan);
-            
+
         }
         static int SumSalary(int[] arrSalary)
         {
@@ -38,7 +37,7 @@ namespace AppKantor
             {
                 tempValue = tempValue + arrSalary[i];
             }
-            return tempValue/ arrSalary.Length;
+            return tempValue / arrSalary.Length;
 
         }
 
@@ -55,7 +54,7 @@ namespace AppKantor
             Console.WriteLine("{0,-20}    {1, 6}", "Nama", "Total Gaji");
             for (int x = 0; x < lengthData; x++)
             {
-                Console.WriteLine("{0,-20} Rp {1, 6}", nama[x], gaji[x]);
+                Console.WriteLine("{0}. {1,-20} Rp {2, 6}",x+1, nama[x], gaji[x]);
             }
             Console.WriteLine($"Sum of salary on this list is : Rp.{Program.SumSalary(gaji)}");
             Console.WriteLine($"Average of salary on this list is : Rp.{Program.AverageSalary(gaji)}");
